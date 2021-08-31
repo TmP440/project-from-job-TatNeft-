@@ -91,22 +91,6 @@ def index():
         return render_template('form_success.html')
 
 
-@app.route('/show')
-def show_info():
-    db_sess = db_session.create_session()
-    user = db_sess.query(User).fisrt()
-    print(user.name, user.surname, user.age, user.prof)
-    db_sess.commit()
-    return 'hello1'
-
-
-@app.route('/user/<name>')
-def index_user(name):
-    db_sess = db_session.create_session()
-    items = db_sess.query(User).filter(User.name == name)
-    return render_template('form_success.html', items=items)
-
-
 if __name__ == '__main__':
     db_session.global_init("db/users.db")
     app.run(port=8080, host='0.0.0.0', debug=True)
