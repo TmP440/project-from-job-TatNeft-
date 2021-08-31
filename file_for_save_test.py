@@ -108,11 +108,11 @@ class Example(QWidget):
 
             worksheet.write_url(row + 1, 18, f'external:{path}')
         workbook.close()
-        send_from = 'kerambit12323@gmail.com'
-        send_to = 'tsyplenokas@tatneft.ru'
-        subject = 'Отчет по заполненным анкетам заявка/проекты'
+        send_from = # your email
+        send_to = # recipient's address
+        subject = # topic
         text = f'Выслано {formatdate(localtime=True)}'
-        self.send_mail(send_from, send_to, subject, text, 'smtp.gmail.com', 587, password="55ARUheh")
+        self.send_mail(send_from, send_to, subject, text, 'smtp.gmail.com', 587, password= # your email password)
 
     def send_mail(self, send_from, send_to, subject, text, server, port, password='', isTls=True):
         msg = MIMEMultipart()
