@@ -9,7 +9,7 @@ from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__, static_folder=os.path.abspath(os.getcwd()) + '\\static', template_folder=os.path.abspath(os.getcwd()) + '\\templates')
 app.config['UPLOAD_FOLDER'] = os.getcwd()
-app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+app.config['SECRET_KEY'] = '********'
 
 CR = 0
 
